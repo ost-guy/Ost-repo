@@ -1,5 +1,5 @@
 #!/bin/bash
-this version dont need mkdir its make mkdir automatically and dont need pre installed network manager and iwd;mkdir -p ~/.config/hypr ~/.config/kitty\
+echo "this version dont need mkdir its make mkdir automatically and dont need pre installed network manager and iwd"mkdir -p ~/.config/hypr ~/.config/kitty\
 sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl kitty pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia networkmanager iwd hyprland
 
 sudo rfkill unblock all
@@ -61,7 +61,7 @@ echo -e "[device]\nwifi.backend=iwd" | sudo tee /etc/NetworkManager/conf.d/wifi_
 
 curl -S 'https://liquorix.net' | sudo bash
 
-sudo bash -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
+sudo -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
 options nvidia-drm modeset=1
 options nvidia NVreg_PreserveVideoMemoryAllocations=1
 options nvidia NVreg_TemporaryFilePath=/var/tmp
