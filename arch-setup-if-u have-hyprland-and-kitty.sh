@@ -1,8 +1,6 @@
 #!/bin/bash
 echo dont need mkdir
-sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl \
-pipewire pipewire-pulse intel-media-driver libva-intel-driver \
-nvidia nvidia-utils nvidia-settings lib32-nvidia-utils nvidia-prime
+sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia
 
 rfkill unblock all
 cat << 'EOF' > ~/.config/hypr/hyprland.conf
@@ -53,7 +51,7 @@ input {
         natural_scroll = true
     }
 }
-
+EOF
 echo "background_opacity 0.8" > ~/.config/kitty/kitty.conf
 echo "confirm_os_window_close 0" >> ~/.config/kitty/kitty.conf
 
@@ -69,7 +67,7 @@ sudo bash -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
 options nvidia-drm modeset=1
 options nvidia NVreg_PreserveVideoMemoryAllocations=1
 options nvidia NVreg_TemporaryFilePath=/var/tmp
-
+EOF
 sed -i '/monitor=,highrr,auto,1/a env = LIBVA_DRIVER_NAME,intel\nenv = __GLX_VENDOR_LIBRARY_NAME,intel\nenv = WLR_NO_HARDWARE_CURSORS,1' ~/.config/hypr/hyprland.conf
 
 sudo sed -i 's/MODULES=(/MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm /' /etc/mkinitcpio.conf
