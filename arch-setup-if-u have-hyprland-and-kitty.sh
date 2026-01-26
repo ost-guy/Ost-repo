@@ -1,8 +1,5 @@
 #!/bin/bash
-echo dont need mkdir and need iwd and networkmanager pre installed
-sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia
-
-rfkill unblock all
+echo dont need mkdir and need iwd and networkmanager pre installed\sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia\rfkill unblock all\
 cat << 'EOF' > ~/.config/hypr/hyprland.conf
 monitor=,highrr,auto,1
 
