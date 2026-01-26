@@ -55,13 +55,9 @@ EOF
 echo "background_opacity 0.8" > ~/.config/kitty/kitty.conf
 echo "confirm_os_window_close 0" >> ~/.config/kitty/kitty.conf
 
-sudo systemctl enable NetworkManager
 sudo pacman -S curl
 curl -S 'https://liquorix.net' | sudo bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo pacman -S --noconfirm nvidia nvidia-utils nvidia-settings lib32-nvidia-utils
-sudo pacman -S --noconfirm nvidia-prime
-#!/bin/bash
 
 sudo bash -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
 options nvidia-drm modeset=1
