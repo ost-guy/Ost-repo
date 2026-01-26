@@ -1,7 +1,5 @@
 #!/bin/bash
-this version dont need mkdir its make mkdir automatically and dont need pre installed network manager and iwd
-mkdir -p ~/.config/hypr ~/.config/kitty
-
+this version dont need mkdir its make mkdir automatically and dont need pre installed network manager and iwd;mkdir -p ~/.config/hypr ~/.config/kitty\
 sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl kitty pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia networkmanager iwd hyprland
 
 sudo rfkill unblock all
