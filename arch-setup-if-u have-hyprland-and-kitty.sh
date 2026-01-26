@@ -1,5 +1,5 @@
 #!/bin/bash
-echo dont need mkdir
+echo dont need mkdir and need iwd and networkmanager pre installed
 sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia
 
 rfkill unblock all
@@ -67,14 +67,12 @@ sudo bash -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
 options nvidia-drm modeset=1
 options nvidia NVreg_PreserveVideoMemoryAllocations=1
 options nvidia NVreg_TemporaryFilePath=/var/tmp
-EOF
+EOF"
 sed -i '/monitor=,highrr,auto,1/a env = LIBVA_DRIVER_NAME,intel\nenv = __GLX_VENDOR_LIBRARY_NAME,intel\nenv = WLR_NO_HARDWARE_CURSORS,1' ~/.config/hypr/hyprland.conf
 
 sudo sed -i 's/MODULES=(/MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm /' /etc/mkinitcpio.conf
 sudo mkinitcpio -P
 echo 'options nvidia NVreg_DynamicPowerManagement=0x02' | sudo tee -a /etc/modprobe.d/nvidia.conf
 echo 'config instaled you finnaly a brazil patriot restarting the arch linux'
-sudo systemctl enable iwd
-sudo systemctl enable NetworkManager
 sudo pacman -Sy
 sudo reboot
