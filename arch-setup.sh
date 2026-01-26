@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo this version need use the mkdir manually
 sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl kitty hyprland \
 pipewire pipewire-pulse intel-media-driver libva-intel-driver \
 nvidia nvidia-utils nvidia-settings lib32-nvidia-utils nvidia-prime networkmanager iwd \
@@ -54,7 +54,6 @@ input {
         natural_scroll = true
     }
 }
-EOF
 
 echo "background_opacity 0.8" > ~/.config/kitty/kitty.conf
 echo "confirm_os_window_close 0" >> ~/.config/kitty/kitty.conf
@@ -81,5 +80,4 @@ echo 'options nvidia NVreg_DynamicPowerManagement=0x02' | sudo tee -a /etc/modpr
 echo 'config instaled you finnaly a brazil patriot restarting the arch linux'
 sudo systemctl enable iwd
 sudo systemctl enable NetworkManager
-sudo pacman -Sy
 sudo reboot
