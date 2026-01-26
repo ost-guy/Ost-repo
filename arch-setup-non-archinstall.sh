@@ -1,5 +1,5 @@
 #!/bin/bash
-
+this version dont need mkdir its make mkdir automatically
 mkdir -p ~/.config/hypr ~/.config/kitty
 
 sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl kitty \
@@ -55,7 +55,6 @@ input {
         natural_scroll = true
     }
 }
-EOF
 
 echo "background_opacity 0.8" > ~/.config/kitty/kitty.conf
 echo "confirm_os_window_close 0" >> ~/.config/kitty/kitty.conf
@@ -70,7 +69,6 @@ sudo bash -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
 options nvidia-drm modeset=1
 options nvidia NVreg_PreserveVideoMemoryAllocations=1
 options nvidia NVreg_TemporaryFilePath=/var/tmp
-EOF"
 
 sed -i '/monitor=,highrr,auto,1/a env = LIBVA_DRIVER_NAME,intel\nenv = __GLX_VENDOR_LIBRARY_NAME,intel\nenv = WLR_NO_HARDWARE_CURSORS,1' ~/.config/hypr/hyprland.conf
 
