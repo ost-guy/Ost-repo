@@ -61,7 +61,6 @@ echo "confirm_os_window_close 0" >> ~/.config/kitty/kitty.conf
 sudo mkdir -p /etc/NetworkManager/conf.d/
 echo -e "[device]\nwifi.backend=iwd" | sudo tee /etc/NetworkManager/conf.d/wifi_backend.conf
 
-sudo systemctl enable NetworkManager
 curl -S 'https://liquorix.net' | sudo bash
 
 sudo bash -c "cat << 'EOF' > /etc/modprobe.d/nvidia.conf
