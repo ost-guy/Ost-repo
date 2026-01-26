@@ -75,3 +75,5 @@ sed -i '/monitor=,highrr,auto,1/a env = LIBVA_DRIVER_NAME,intel\nenv = __GLX_VEN
 sudo sed -i 's/MODULES=(/MODULES=(i915 nvidia nvidia_modeset nvidia_uvm nvidia_drm /' /etc/mkinitcpio.conf
 sudo mkinitcpio -P
 echo 'options nvidia NVreg_DynamicPowerManagement=0x02' | sudo tee -a /etc/modprobe.d/nvidia.conf
+echo 'config instaled you finnaly a brazil patriot restarting the arch linux'
+sudo reboot
