@@ -1,6 +1,6 @@
 #!/bin/bash
-echo "this version dont need mkdir its make mkdir automatically and dont need pre installed network manager and iwd and if dont work try repair if possible this script is only to use hyprland with less complication"mkdir -p ~/.config/hypr ~/.config/kitty\
-sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl kitty pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia networkmanager iwd hyprland
+echo "this version dont need mkdir its make mkdir automatically and dont need pre installed network manager and iwd and if dont work try repair if possible this script is only to use hyprland with less complication"mkdir -p ~/.config/hypr ~/.config/kitty|
+sudo pacman -S --noconfirm swww waybar wofi wl-clipboard curl kitty pipewire pipewire-pulse intel-media-driver libva-intel-driver nvidia networkmanager iwd hyprland nvidia-prime
 
 sudo rfkill unblock all
 cat << 'EOF' > ~/.config/hypr/hyprland.conf
