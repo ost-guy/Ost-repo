@@ -74,7 +74,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'options nvidia NVreg_DynamicPowerManagement=0x02' | sudo tee -a /etc/modprobe.d/nvidia.conf
 echo 'config instaled you finnaly a brazil patriot restarting the arch linux'
-
 sudo systemctl enable iwd
 sudo systemctl enable NetworkManager
 sudo reboot
