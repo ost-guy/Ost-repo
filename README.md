@@ -1,1 +1,2 @@
-yo hello this is a bazzite iso repo
+yo hello
+
