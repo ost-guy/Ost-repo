@@ -1,0 +1,1 @@
+coreboot tutorial to ideapad 330 first no boot guard on intel CPU eexomd use flash rom to copy the bios and compile the coreboot with the parts of the bios using ifdtool from github clone Page of coreboot
