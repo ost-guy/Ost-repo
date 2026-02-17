@@ -1,0 +1,2 @@
+echo starting update
+sudo ujust full-update
